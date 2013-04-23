@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width" />
+  <title>Realent</title>
+
+  <link rel="stylesheet" href="stylesheets/foundation/css/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+ <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
+  <script src="stylesheets/foundation/js/vendor/custom.modernizr.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="javascripts/handlebars.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- google font added directly for now, should build collection-->
+</head>
+
+  
+<body>
+
+
+<div class="fixed">
+<nav class="top-bar">
+
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">realent</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </section>
+</nav>
+</div>
+
+  <header>
+    <div class="row">
+      <div class="twelve columns">
+        <h1>Challenge feed</h1>
+        <h4>Forget photo apps, be a man, solve real problems.</h4>
+      </div>
+    </div>
+  </header>
+
+ 
+  <header class="gray">
+    <div class="row">
+      <div class="twelve columns">
+        <h6>Perhaps you could solve the <a href="#">bandwidth challenge </a> or improve <a href="#">medication adherence</a>...</h6>
+      </div>
+    </div>
+  </header>
+
+
+<section id="mainContent">
+  <div class="row">
+
+
+    <div class="large-2 columns push-ten">
+
+          <ul class="side-nav">
+          <li class="active"><a href="index.html">&larr; Home</a></li>
+          <li class="divider"></li>
+          <li onclick="adminMode()"><a>Admin Mode</a></li>
+          <li onclick="topQuotes()"><a>Top Challenges</a></li>
+          <li onclick="justSpottedQuotes()"><a>Just spotted</a></li>
+          <br>
+          <li class="divider"></li>
+          <li><p>Verticals</p></li>
+          <li><a href="#">Telecoms</a></li>
+          <li><a href="#">Retail</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Consumer</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="large-10 columns push-two">
+
+
+      <div class="row" id="descriptionpanel">
+
+
+          <div class="large-7 columns" id="introduction">
+
+            <p class="show-for-small"><a href="index.php">&larr; Back to Home</a></p>
+            <h2>A hidden goldmine</h2>
+            <h4 class="subheader">How to get started</h4>
+
+            <p>If you want to escape the corperate grind and start a company ideas can be hard to find, it feels like everything has been done and it's impossible to predict which fad app will be the next big thing. The key ingredient to real entrepreneurship is solving a pressing problem, here we cut out the serindipity and highlight hundreds of opportunties across a range of industries as they're mentioned.
+
+            <!--  -->
+          </div>
+
+
+
+        <div class="large-4 large-offset-1 columns" id="advertblock">
+          
+          <div class="row">
+            <br> 
+          
+            <h5>Get the weekly idea update</h5>
+
+            <form>
+      <div class="row collapse">
+        <div class="small-9 columns">
+          <input type="text" placeholder="Enter email">
+        </div>
+        <div class="small-3 columns">
+          <a href="#" class="button prefix">Go!</a>
+        </div>
+      </div>
+            </form>
+           
+          </div>
+
+
+         </div>
+
+
+        <div class="large-12 columns">
+
+         <!--  repeating grid. The columsn are filled in dynamically using
+         the template at the bottom--> 
+
+        <ul class="small-block-grid-2 large-block-grid-4">
+
+        <li>
+          <div class="line1" id="line1"></div><!-- column1 -->
+        </li>
+        <li>
+          <div class="line1" id="line2"></div><!-- column1 -->
+        </li>
+        <li>
+          <div class="line1" id="line3"></div><!-- column1 -->
+        </li>
+        <li>
+          <div class="line1" id="line4"></div><!-- column1 -->
+        </li>
+        </ul>
+          
+      </div> <!--  repeating grid --> 
+
+    </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ 
+  <script src="stylesheets/foundation/js/foundation.min.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.alerts.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.clearing.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.cookie.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.forms.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.magellan.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.placeholder.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.section.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.tooltips.js"></script>
+  <script src="stylesheets/foundation/js/foundation/foundation.topbar.js"></script>
+
+
+  <script src="index.js"></script>
+
+  <script src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+
+  <script>
+  $(document).foundation();
+  </script>
+
+  <script>
+    // Create an account on Parse.com and fill this in with your App ID and JS Key
+    Parse.initialize("g0JMIYXqHQ0QNqWTsMwoUyvaQgTZFu4wgJLetDaf", "Va7X6EDMV1Nbgv50l2d1ZeViGSKgLMGxNmUfCGbr")
+
+
+
+  </script>
+
+            <script type="text/x-handlebars-template" id="box-template">
+
+            <div class="opboxclear">
+             <img src="images/{{image}}" alt="">
+             <h4>{{score}}</h4><p> <a href="#" data-reveal-id="myModal" data-animationspeed="300" data-animation="pop">Full info</a></p>
+             <p>{{snippet}}</p>
+
+             <div class="controlpannel">
+
+            <i class="foundicon-up-arrow" onclick='updateQuote("{{objectId}}",2)')></i> 
+            <i class="foundicon-down-arrow" onclick='updateQuote("{{objectId}}",3)'></i>
+            <i class="foundicon-remove" onclick='updateQuote("{{objectId}}",1)'></i> 
+             </div>
+
+            </div>
+           <div class=opboxspacer></div>   
+          </script>
+
+
+
+
+            </script>
+
+            <script type="text/x-handlebars-template" id="box-templateAdmin">
+
+            <div class="opboxclear">
+             <img src="{{image}}" alt="" width="100">
+             <h5>{{score}} <a href="#" data-reveal-id="myModal" data-animationspeed="300" data-animation="pop">Full info</a></h5>
+             <h5>Title: {{title}}</h5>
+             <p>Snippet: {{snippet}}</p>
+             <p>Content: {{content}}</p>
+             <p>Published on: {{publishDate}}</p>
+             <p>Media pack: {{mediaGroup}}</p>
+             <p>Link: {{link}}</p>
+             <p>Keyword: {{keyword}}</p>
+
+
+
+
+
+             <div class="controlpannel">
+
+            <i class="foundicon-up-arrow" onclick='updateQuote("{{objectId}}",2)')></i> 
+            <i class="foundicon-down-arrow" onclick='updateQuote("{{objectId}}",3)'></i>
+            <i class="foundicon-remove" onclick='updateQuote("{{objectId}}",1)'></i> 
+             </div>
+
+            </div>
+           <div class=opboxspacer></div>   
+          </script>
+
+
+<!-- MORE INFO WINDOW -->
+
+
+<div id="myModal" class="reveal-modal">
+   <h1>Modal Title</h1>
+   <p>Any content could go in here.</p>
+   <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+
+  </body>
+</html>
